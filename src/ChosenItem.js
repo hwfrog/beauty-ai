@@ -8,35 +8,25 @@ import DenseAppBar from './DenseAppBar.js';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isHome: true };
-  }
-  flip = ()=>{
-    const newstate = !this.state.isHome;
-    this.setState({isHome: newstate});
-  }
   render() {
-    if (this.state.isHome){
-    return (
-      <div>
-        <ButtonAppBar />
-        <ImgMediaCard flip={this.flip}/>
-        <ImgMediaCard />
-        <ImgMediaCard />
-        <ImgMediaCard />
-      </div>
-    );
-  }
-  else{
+    // return (
+    //   <div>
+    //     <ButtonAppBar />
+    //     <ImgMediaCard />
+    //     <ImgMediaCard />
+    //     <ImgMediaCard />
+    //     <ImgMediaCard />
+    //   </div>
+    // );
     return (
       <div>
       <DenseAppBar />
       <ImgDetailCard />
+      <div className={"DetailCard"}>
       <ImgRecomCard/>
       </div>
-    );    
-  }
+      </div>
+    );
   }
 }
 
