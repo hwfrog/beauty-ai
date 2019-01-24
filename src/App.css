@@ -18,6 +18,17 @@
   color: white;
 }
 
+.styles-card {
+  width: 345;
+  float: 'left';
+}
+
+.styles-card {
+
+  objectFit: 'cover'
+
+}
+
 .DetailCard {
    padding-top: 50px;
 }

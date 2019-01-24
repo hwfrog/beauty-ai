@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,13 +17,15 @@ const styles = {
   },
 };
 
-function DenseAppBar(props) {
-  const { classes } = props;
+class DenseAppBar extends Component {
+  render() {
   return (
-    <div className={classes.root}>
+    <div className={{flexGrow: 1}}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton className={{marginLeft: -18,
+    marginRight: 10,}} color="inherit" aria-label="Menu"
+                      onClick={this.props.flip}>
             <KeyboardArrowLeft />
           </IconButton>
           <Typography variant="h6" color="inherit">
@@ -34,9 +36,10 @@ function DenseAppBar(props) {
     </div>
   );
 }
+}
 
 DenseAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(DenseAppBar);
+export default DenseAppBar;

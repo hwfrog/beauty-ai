@@ -22,16 +22,16 @@ class App extends Component {
       <div>
         <ButtonAppBar />
         <ImgMediaCard flip={this.flip}/>
-        <ImgMediaCard />
-        <ImgMediaCard />
-        <ImgMediaCard />
+        <ImgMediaCard flip={this.flip}/>
+        <ImgMediaCard flip={this.flip}/>
+        <ImgMediaCard flip={this.flip}/>
       </div>
     );
   }
   else{
     return (
       <div>
-      <DenseAppBar />
+      <DenseAppBar flip={this.flip}/>
       <ImgDetailCard />
       <ImgRecomCard/>
       </div>
